@@ -1,0 +1,121 @@
+<section class="keep-track wrapper">
+  <article class="keep-track-article">
+    <h2>Keep track of your snippets</h2>
+    <p>
+    Clipboard instantly stores any item you copy in the cloud, 
+    meaning you can access your snippets immediately on all your 
+    devices. Our Mac and iOS apps will help you organize everything.
+    </p>
+  </article>
+  <div class="features-wrapper">
+    <picture class="computer-picture">
+      <img src="/image-computer.png" alt="Mac computer with a check mark">
+    </picture>
+    <ul class="features-list flow" style="--flow-space: 2.9rem">
+      <li>
+        <h3>Quick Search</h3>
+        <p>Easily search your snippets by content, category, web address, application, and more.</p>
+      </li>
+      <li>
+        <h3>iCloud Sync</h3>
+        <p>Instantly saves and syncs snippets across all your devices.</p>
+      </li>
+      <li>
+        <h3>Complete History</h3>
+        <p>Retrieve any snippets from the first moment you started using the app.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .keep-track {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .keep-track-article {
+    max-width: 60ch;
+  }
+
+  .keep-track-article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem
+  }
+
+  .features-wrapper {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+  }
+
+  .computer-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    & img {
+      height: auto;
+      transform: translateX(-185px);
+    }
+  }
+
+  .features-list {
+    padding-top: 3.7rem;
+    text-align: left;
+    height: 100%;
+    max-width: 34ch
+  }
+
+  .features-list li h3 {
+    margin-bottom: .8rem
+  }
+
+  @media (width <= 968px) {
+    .features-wrapper {
+      grid-template-columns: 400px 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (width <= 768px) {
+    .features-wrapper {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .keep-track-article {
+      max-width: 50ch
+    }
+
+    .keep-track-article h2 {
+      font-size: 1.5rem
+    }
+
+    .computer-picture {
+      width: fit-content;
+      height: fit-content;
+
+      & img {
+        width: min(400px, 100%);
+        height: auto;
+        transform: translateX(0px)
+      }
+    }
+
+    .features-list {
+      margin-inline: auto;
+    }
+
+    .features-list li {
+      text-align: center;
+    } 
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+import Download from "@components/Download.astro"
+---
+
+<section class="hero">
+  <picture class="header-picture">
+    <source srcset="/bg-header-mobile.png" media="(max-width: 768px)">
+    <img src="/bg-header-desktop.png" alt="Header background">
+  </picture>
+
+  <article class="hero-article wrapper">
+    <picture class="logo-picture">
+      <img src="/logo.svg" alt="Clipboard logo">
+    </picture>
+    <h1>A history of everything you copy</h1>
+    <p>
+      Clipboard allows you to track and organize everything you 
+      copy. Instantly access your clipboard on all your devices.
+    </p>
+    <Download />
+  </article>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding-top: 6rem;
+    margin-bottom: 5rem
+  }
+
+  .header-picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    & img {
+      width: 100%
+    }
+  }
+
+  .hero-article {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 55ch
+  }
+
+  .logo-picture {
+    margin-bottom: 3rem;
+  }
+
+  .hero-article h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-article p {
+    margin-bottom: 1.6rem;
+  }
+
+  @media (width <= 768px) {
+    .hero-article {
+      max-width: 50ch
+    }
+
+    .hero-article h1 {
+      font-size: 1.7rem
+    }
+  }
+</style>

@@ -1,0 +1,30 @@
+<section class="sponsors wrapper">
+  <ul class="sponsors-list">
+    <li><img src="/logo-google.png" alt="Google logo"></li>
+    <li><img src="/logo-ibm.png" alt="IBM logo"></li>
+    <li><img src="/logo-microsoft.png" alt="Microsoft Logo"></li>
+    <li><img src="/logo-hp.png" alt="HP Logo"></li>
+    <li><img src="/logo-vector-graphics.png" alt="Vector Graphics logo"></li>
+  </ul>
+</section>
+
+<style>
+  .sponsors {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .sponsors-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  @media (width <= 768px) {
+    .sponsors-list {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+</style>

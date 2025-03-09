@@ -1,0 +1,109 @@
+---
+import IconFacebook from "@assets/IconFacebook.astro"
+import IconTwitter from "@assets/IconTwitter.astro"
+import IconInstagram from "@assets/IconInstagram.astro"
+---
+
+<footer class="pm-footer">
+  <div class="pm-footer-wrapper wrapper">
+    <picture class="logo-picture">
+      <img src="/logo.svg" alt="Clipboard logo">
+    </picture>
+    <nav class="pm-footer-nav">
+      <ul class="pm-footer-nav-list flow">
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Press Kit</a></li>
+        <li><a href="#">Install Guide</a></li>
+      </ul>
+    </nav>
+    <nav class="social-nav">
+      <ul class="social-nav-list">
+        <li><a href="#"><span><IconFacebook /></span></a></li>
+        <li><a href="#"><span><IconTwitter /></span></a></li>
+        <li><a href="#"><span><IconInstagram /></span></a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .pm-footer {
+    padding-block: 4rem;
+    background-color: #F4F7F7
+  }
+
+  .pm-footer a {
+    transition: color .12s ease;
+  }
+
+  .pm-footer a:hover {
+    color: var(--s-cyan)
+  }
+
+  .pm-footer-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 3rem 6.8rem;
+    align-items: center;
+  }
+
+  .logo-picture {
+    width: 57px;
+
+    & img { width: 100% }
+  }
+
+  .pm-footer-nav {
+    --flow-space: 1rem;
+
+    columns: 3;
+    max-width: 50ch;
+  }
+
+  .social-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media (width <= 1028px) {
+    .pm-footer-wrapper {
+      grid-template-columns: auto 1fr;
+      justify-content: center;
+      gap: 4rem 5rem;
+      align-items: center;
+    }
+
+    .pm-footer-nav {
+      max-width: 100%
+    }
+
+    .social-nav {
+      grid-column: 1 / span 2;
+      justify-content: center;
+    }
+
+    .social-nav-list {
+      justify-content: center
+    }
+  }
+
+  @media (width <= 768px) {
+    .pm-footer-wrapper {
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+
+    .pm-footer-nav {
+      --flow-space: 1.3rem;
+      columns: unset;
+      text-align: center
+    }
+
+    .social-nav {
+      grid-column: unset;
+    }
+  }
+</style>

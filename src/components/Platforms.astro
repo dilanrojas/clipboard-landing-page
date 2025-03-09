@@ -1,0 +1,42 @@
+---
+import Download from "@components/Download.astro"
+---
+
+<section class="platforms wrapper">
+  <article class="platforms-article">
+    <h2>Clipboard for iOS and Mac OS</h2>
+    <p>
+      Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+      and you’re ready to start adding to your clipboard.
+    </p>
+  </article>
+  <Download />
+</section>
+
+<style>
+  .platforms {
+    margin-top: 9rem;
+    margin-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .platforms-article {
+    text-align: center;
+    max-width: 60ch; 
+    margin-bottom: 2rem
+  }
+
+  .platforms-article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (width <= 768px) {
+    .platforms-article h2 {
+      font-size: 1.5rem
+    }
+  }
+</style>

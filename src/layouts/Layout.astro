@@ -1,0 +1,109 @@
+---
+import Footer from "@components/Footer.astro"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+		<title>Frontend Mentor | Clipboard landing page</title>
+	</head>
+	<body>
+    <main>
+  		<slot />
+    </main>
+    <Footer />
+	</body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+  :root {
+    --s-cyan: hsl(171, 66%, 44%);
+    --l-blue: hsl(233, 100%, 69%);
+
+    --d-gsh-blue: hsl(210, 10%, 33%);
+    --gsh-blue: hsl(201, 11%, 66%);
+
+    --ff-html: "Bai Jamjuree", sans-serif;
+  }
+
+  html {
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: var(--ff-html);
+    color: var(--d-gsh-blue);
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  ul, ol {
+    list-style: none
+  }
+
+  p {
+    color: var(--gsh-blue)
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600
+  }
+
+  svg, picture, img {
+    display: block
+  }
+
+  svg { color: currentColor }
+
+  a {
+    text-decoration: none;
+    color: currentColor
+  }
+
+  button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: inherit
+  }
+
+  /* Utility classes */
+  .wrapper {
+    --width: 1100px;
+    --padding: 2rem;
+
+    width: min(var(--width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+  }
+
+  .flow > * + * {
+    margin-top: var(--flow-space, 1rem)
+  }
+
+  .button {
+    border-radius: 30px;
+    padding: .6rem 1.6rem;
+    color: #FEFEFE;
+    font-weight: 500;
+    transition: box-shadow .12s ease;
+  }
+</style>

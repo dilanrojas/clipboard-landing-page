@@ -1,0 +1,48 @@
+<section class="access wrapper">
+  <article class="access-article">
+    <h2>Access Clipboard anywhere</h2>
+    <p>
+    Whether you’re on the go, or at your computer, you can access all your Clipboard 
+    snippets in a few simple clicks.
+    </p>
+  </article>
+  <picture class="access-picture">
+    <img src="/image-devices.png" alt="iPhone and iPad with a check mark on the screen">
+  </picture>
+</section>
+
+<style>
+  .access {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .access-article {
+    max-width: 58ch;
+    margin-bottom: 5.5rem;
+  }
+
+  .access-article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .access-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img { width: min(905px, 100%) }
+  }
+
+  @media (width <= 768px) {
+    .access-picture img {
+      width: min(420px, 100%)
+    }
+  }
+</style>
